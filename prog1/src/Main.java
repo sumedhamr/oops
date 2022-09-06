@@ -2,7 +2,7 @@ import java.util.*;
 class Complex{
     Complex()
     {
-// THis is a constructor
+
     }
     int real,img;
     Complex(int t1,int t2)
