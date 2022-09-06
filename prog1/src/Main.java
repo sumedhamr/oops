@@ -10,24 +10,30 @@ class Complex{
         this.real=t1;
         this.img=t2;
     }
-    static void  add(Complex no1,Complex no2)
+    static Complex add(Complex no1,Complex no2)
     {
         Complex no3=new Complex();
         no3.real=no1.real+no2.real;
         no3.img=no1.img+no2.img;
-        System.out.println("sum is : "+no3.real+"+"+no3.img+"i");
+        return no3;
     }
-    static void sub(Complex no1,Complex no2)
+    static Complex sub(Complex no1,Complex no2)
     {
         Complex no4=new Complex();
         no4.real=no1.real-no2.real;
         no4.img=no1.img-no2.img;
-        System.out.println("diffrence is : "+no4.real+"+"+no4.img+"i");
+        return no4;
     }
+    
 }
 public class Main {
+    static void display(Complex no)
+    {
+        System.out.println(no.real+"+"+no.img+"i");
+    }
     public static void main(String[] args)
         {
+        
         Scanner in =new Scanner(System.in);
         System.out.println("enter the real and img part of  1st complex no");
         int temp1=in.nextInt();
@@ -37,7 +43,7 @@ public class Main {
         int temp3=in.nextInt();
         int temp4=in.nextInt();
         Complex c2=new Complex(temp3,temp4);
-        Complex.add(c1,c2);
-        Complex.sub(c1,c2);
+        display(Complex.add(c1,c2));
+        display(Complex.sub(c1,c2));
     }
 }
